@@ -5,15 +5,15 @@ There seems to be an issue with Kue where it processes a job multiple times when
 
 
 ## Install
-1) install redis / nodejs / npm
-2) git clone https://github.com/kimballfrank/kue-cluster-f.git
-3) cd kue-cluster-f
-4) npm install
+1. install redis / nodejs / npm
+2. git clone https://github.com/kimballfrank/kue-cluster-f.git
+3. cd kue-cluster-f
+4. npm install
 
 ## Run in seperate terminals
-1) redis-server
-2) node server.js
-3) node scheduler.js
+1. redis-server
+2. node server.js
+3. node scheduler.js
 
 ## About
 
