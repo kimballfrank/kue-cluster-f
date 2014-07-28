@@ -1,0 +1,27 @@
+{
+  "name": "kue-cluster-f",
+  "version": "0.0.1",
+  "description": "Kue Cluster seems to be processing jobs multiple times.",
+  "main": "server.js",
+  "dependencies": {
+    "cron": "~1.0.3",
+    "express": "~3.5.0",
+    "kue": "^0.8.1",
+    "lodash": "~2.4.1",
+    "moment": "~2.5.1",
+    "redis": "~0.10.3",
+    "request": "~2.34.0",
+    "time": "~0.10.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/github.com/kimballfrank/kue-cluster-f.git"
+  },
+  "author": "Kimball Frank Wirig",
+  "homepage": "https://github.com/kimballfrank/kue-cluster-f"
+}
