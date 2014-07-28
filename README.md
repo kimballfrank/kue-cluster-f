@@ -1,7 +1,7 @@
 kue-cluster-f
 =============
 
-There seems to be an issue with Kue where it processes a job multiple times when configured a certain way. 
+There seems to be an issue with Kue where it processes a job multiple times when configured a certain way. Make sure to let it run for a little bit. It will eventually reproduce the error.
 
 
 ## Install
@@ -23,7 +23,7 @@ A nodejs cluster with 4 workers. Each worker is Kue wrapped in Express. The app 
 http://127.0.0.1:3600
 
 ### scheduler.js
-scheduler.js uses Kue JSON api to create a new testJob every 10 seconds, every other job is delayed to test if delayed jobs are contributing to the issue. 
+scheduler.js uses Kue JSON api to create a new testJob every 10 seconds, the jobs are delayed to test if delayed jobs are contributing to the issue. Remove the delay to see if it reproduces without. I have not been able to reproduce it that way yet.
 
 ### testJob.js
 A barebones job that just logs the job.id and the pid at start and at done. 

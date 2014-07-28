@@ -38,14 +38,15 @@ function sendTestJob(){
       "data": { title: "send test job from scheduler" },
       "options" : {
         "attempts": 1
+        , "delay": 10000
       }
     }
   };
 
-if(delay) {
-  testJob.json.data.title = "send delayed testJob from scheduler";
-  testJob.options.delay = 10000;
-}
+// if(delay) {
+//   testJob.json.data.title = "send delayed testJob from scheduler";
+//   testJob.json.options.delay = 30000;
+// }
 
   request(testJob, function(error, response, body) {
     if (error) {
@@ -60,7 +61,7 @@ if(delay) {
 
 
 var heartbeat = new cronJob({
-  cronTime: '*/10 * * * * *', // send testjob every thirty seconds
+  cronTime: '*/5 * * * * *', // send testjob every thirty seconds
   onTick: function() {
     console.log('');
     console.log('****************************************');
@@ -70,12 +71,12 @@ var heartbeat = new cronJob({
 
     sendTestJob(); 
     
-    if(delay){
-      delay = false;
-    }
-    else {
-      delay = true;
-    }
+    // if(delay){
+    //   delay = false;
+    // }
+    // else {
+    //   delay = true;
+    // }
   },
   start: true
 
