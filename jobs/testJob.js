@@ -10,7 +10,6 @@ exports = module.exports = (function(job, done){
 
   var jobKey = "job_" + job.id;
   logMe('');
-  logMe('***************************************************');
   logMe('start ' + jobKey + ' pid ' + process.pid);
 
   setTimeout(function(){
