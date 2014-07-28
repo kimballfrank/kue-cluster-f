@@ -10,10 +10,10 @@ There seems to be an issue with Kue where it processes a job multiple times when
 3) cd kue-cluster-f
 4) npm install
 
-## Run
+## Run in seperate terminals
 1) redis-server
-2) server.js
-3) scheduler.js
+2) node server.js
+3) node scheduler.js
 
 ## About
 
